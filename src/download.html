@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload and Download</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+		body {
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Upload and Download</h1>
+		<div class="row">
+			<div class="col-sm-6">
+				<h2>Télécharger un fichier</h2>
+				<p>Cliquez sur le bouton ci-dessous pour télécharger un fichier:</p>
+				<a href="dowload.txt" download class="btn btn-primary">Télécharger</a>
+			</div>
+			<div class="col-sm-6">
+				<h2>Uploader un fichier</h2>
+				<p>Cliquez sur le bouton ci-dessous pour sélectionner un fichier à uploader:</p>
+				<input type="file" id="uploadFile">				
+				<p id="fileName"></p>
+				<button type="button" id="uploadButton" onclick="uploadFile()" class="btn btn-primary">Uploader</button>
+			</div>
+		</div>
+	</div>
+	<script src="../scripts/upload.js"></script>
+</body>
+</html>
