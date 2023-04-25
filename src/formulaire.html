@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../assets/js/color-modes.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/checkout/">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles/checkout.css" rel="stylesheet">
+    
+    <title>Formulaire</title>
+</head>
+<body>
+    <div class="container">
+        
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Formulaire d'inscription</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Un prénom valide est requis.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Un nom valide est requis.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Nom d'utilisateur</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" placeholder="Nom d'utilisateur" required>
+              <div class="invalid-feedback">
+                Votre nom d'utilisateur est obligatoire.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="nom@example.com">
+              <div class="invalid-feedback">
+                Veuillez saisir une adresse électronique valide.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Adresse</label>
+              <input type="text" class="form-control" id="address" placeholder="10ème Rue de la Faillette" required>
+              <div class="invalid-feedback">
+                Veuillez saisir votre adresse.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Adresse 2 <span class="text-body-secondary">(Optionnel)</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Appartement ou suite">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Pays</label>
+              <select class="form-select" id="country" required>
+                <option value="">Choisissez...</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Allemagne">Allemagne</option>
+                <option value="Australie">Australie</option>
+                <option value="Brésil">Brésil</option>
+                <option value="Canada">Canada</option>
+                <option value="Chine">Chine</option>
+                <option value="Espagne">Espagne</option>
+                <option value="États-Unis">États-Unis</option>
+                <option value="France">France</option>
+                <option value="Inde">Inde</option>
+                <option value="Indonésie">Indonésie</option>
+                <option value="Italie">Italie</option>
+                <option value="Japon">Japon</option>
+                <option value="Madagascar">Madagascar</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Pays-Bas">Pays-Bas</option>
+                <option value="Russie">Russie</option>
+                <option value="Royaume-Uni">Royaume-Uni</option>
+                <option value="Turquie">Turquie</option>
+                <option value="Vietnam">Vietnam</option>
+              </select>
+              <div class="invalid-feedback">
+                Veuillez sélectionner un pays valide.
+              </div>
+            </div>            
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Code postal</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <div class="invalid-feedback">
+                Code postal requis.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+          
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">Payement</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <label class="form-check-label" for="credit">Carte de crédit</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="debit">Mastercard</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Nom sur la carte</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-body-secondary">Nom complet tel qu'il figure sur la carte</small>
+              <div class="invalid-feedback">
+                Le nom sur la carte est obligatoire
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Numéro de carte de crédit</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required>
+              <div class="invalid-feedback">
+                Le numéro de la carte de crédit est requis
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Expiration</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+              <div class="invalid-feedback">
+                Date d'expiration requise
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+              <div class="invalid-feedback">
+                Code de sécurité requis
+              </div>
+            </div>
+          </div>
+          
+          <hr class="my-4">
+          <div id="checking">
+            <div class="check_conditions">
+                <label for="accepter-conditions">J'accepte les conditions d'utilisation :</label>
+                <input type="checkbox" id="accepter-conditions" name="accepter-conditions" required>
+            </div>
+            <div class="check_conditions">
+                <label for="recevoir-newsletter">Je souhaite recevoir des newsletters par e-mail :</label>
+                <input type="checkbox" id="recevoir-newsletter" name="recevoir-newsletter" checked>
+            </div>   
+            
+          </div>
+          <hr class="my-4">
+          <button class="w-100 btn btn-primary btn-lg" id="confirmationBtn" type="submit" data-toggle="modal" data-target="#myModal">Confirmer</button>
+        </form>
+        <div class="card card-text-success text-center p-3 d-none" id="myModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title">Succès !</h4>                      
+                  </div>
+                  <div class="modal-body">
+                      <p>Votre demande a été traitée avec succès.</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" id="ok-btn" data-dismiss="modal">OK</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="../scripts/checkout.js"></script>
+</body>
+</html>

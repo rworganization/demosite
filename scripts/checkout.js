@@ -17,3 +17,21 @@
     }, false)
   })
 })()
+
+const confirmationBtn = document.getElementById("confirmationBtn");
+const targetElement = document.getElementById("myModal");
+const okBtn = document.getElementById("ok-btn");
+
+confirmationBtn.addEventListener("click", function() {
+  // Vérifier si l'opération a réussi, puis supprimer la classe "d-none"
+      targetElement.classList.remove("d-none");
+  
+
+});
+
+okBtn.addEventListener("click", function() {
+  // Vérifier si l'opération a réussi, puis supprimer la classe "d-none"
+  
+    targetElement.classList.add("d-none");
+  
+});
