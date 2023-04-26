@@ -14,7 +14,7 @@ import Formulaire from './pages/Formulaire';
 function App() {
   
   return (
-    <BrowserRouter>   
+    <BrowserRouter basename="/demosite">   
       <Navbar />   
       <Routes>
         <Route path='/' element={<Accueil />}/>
