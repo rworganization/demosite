@@ -1,19 +1,33 @@
 import React from 'react';
-import '../styles/sidebars.css'
+import '../styles/sidebars.css';
 import { NavLink } from 'react-router-dom';
+import * as bootstrap from 'bootstrap';
 
-function Navbar(props) {
-    return (
+class Navbar extends React.Component {
+        componentDidMount() {
+            const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            tooltipTriggerList.forEach(tooltipTriggerEl => {
+            new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    link.classList.add('active');
+                });
+            });
+        }
+        render() { return (
         <div className="flex-shrink-0 p-3 navbar" id="sidebar" style={{ width: 280 }}>
-            <a
-                href="/#"
+            <NavLink
+                to ='/'
                 className="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"
             >
                 <svg className="bi pe-none me-2" width={30} height={24}>
                 <use xlinkHref="#bootstrap" />
                 </svg>
                 <span className="fs-5 fw-semibold">Demosite</span>
-            </a>
+            </NavLink>
             <ul className="list-unstyled ps-0">
                 <li className="mb-1">
                 <button
@@ -30,7 +44,9 @@ function Navbar(props) {
                         <NavLink
                         to='/textbox'
                         className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                        
                         >
+                        
                         Text box
                         </NavLink>
                     </li>
@@ -38,6 +54,7 @@ function Navbar(props) {
                         <NavLink
                         to ='/checkbox'
                         className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                        a
                         >
                         Check box
                         </NavLink>
@@ -51,12 +68,12 @@ function Navbar(props) {
                         </NavLink>
                     </li>
                     <li>
-                        <a
-                        href="src/webtables.html"
+                        <NavLink
+                        to ='/webtables'
                         className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                         >
                         Web tables
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
                         <NavLink
@@ -67,20 +84,20 @@ function Navbar(props) {
                         </NavLink>
                     </li>
                     <li>
-                        <a
-                        href="src/download.html"
+                        <NavLink
+                        to ='/download'
                         className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                         >
                         Upload Download
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a
-                        href="src/dynamic.html"
+                        <NavLink
+                        to ='/dynamic'
                         className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                         >
                         Dynamic Properties
-                        </a>
+                        </NavLink>
                     </li>
                     </ul>
                 </div>
@@ -97,12 +114,12 @@ function Navbar(props) {
                 <div className="collapse" id="dashboard-collapse">
                     <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li>
-                        <a
-                        href="src/formulaire.html"
+                        <NavLink
+                        to ='/formulaire'
                         className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                         >
                         Formulaire
-                        </a>
+                        </NavLink>
                     </li>
                     </ul>
                 </div>
@@ -118,33 +135,22 @@ function Navbar(props) {
                 </button>
                 <div className="collapse" id="orders-collapse">
                     <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li>
-                        <a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">                      New
-                        </a>
+                    <li>                       
                     </li>
                     <li>
-                        <a
-                        href="#"
-                        className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                        >
+                        
                         Processed
-                        </a>
+                        
                     </li>
                     <li>
-                        <a
-                        href="#"
-                        className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                        >
+                        
                         Shipped
-                        </a>
+                        
                     </li>
                     <li>
-                        <a
-                        href="#"
-                        className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                        >
+                        
                         Returned
-                        </a>
+                        
                     </li>
                     </ul>
                 </div>
@@ -162,36 +168,24 @@ function Navbar(props) {
                 <div className="collapse" id="account-collapse">
                     <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li>
-                        <a
-                        href="#"
-                        className="link-dark d-inline-flex text-decoration-none rounded"
-                        >
+                        
                         Login
-                        </a>
+                        
                     </li>
                     <li>
-                        <a
-                        href="#"
-                        className="link-dark d-inline-flex text-decoration-none rounded"
-                        >
+                       
                         Profile
-                        </a>
+                        
                     </li>
                     <li>
-                        <a
-                        href="#"
-                        className="link-dark d-inline-flex text-decoration-none rounded"
-                        >
+                        
                         Settings
-                        </a>
+                        
                     </li>
                     <li>
-                        <a
-                        href="#"
-                        className="link-dark d-inline-flex text-decoration-none rounded"
-                        >
+                        
                         API
-                        </a>
+                        
                     </li>
                     </ul>
                 </div>
@@ -199,7 +193,7 @@ function Navbar(props) {
             </ul>
             </div>
 
-    );
+    );}
 }
 
 export default Navbar;

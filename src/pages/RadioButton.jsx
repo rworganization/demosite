@@ -28,7 +28,8 @@ function RadioButton(props) {
     
     return (
         <div className="container">
-            <h2> Aimez-vous le site ? </h2>
+            <h4 className="mb-3">Radio boutons</h4>
+            <h6> Aimez-vous le site ? </h6>
             <form>
                 <div className="form-check">
                 <input

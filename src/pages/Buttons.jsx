@@ -29,6 +29,7 @@ class ButtonsComponent extends React.Component {
   render() {
     return (
       <div className="container">
+        <h4 className="mb-3">Boutons</h4>
         <div className="row">
           <div className="col">
             <button id="simple-click-btn" className="btn btn-primary">Simple click</button>

@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../styles/checkout.css'
 
 function Textbox(props) {
+    const formRef = useRef(null);
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      if (formRef.current.checkValidity()) {
+        // Handle successful form submission here
+        formRef.current.reset();
+      } else {
+        formRef.current.classList.add('was-validated');
+      }
+    };
     return (
         <div className="container">
             <div className="row g-5">
                 <h4 className="mb-3">Text box</h4>
-                <form className="needs-validation" noValidate="">
+                <form className="needs-validation"  ref={formRef} onSubmit={handleSubmit} noValidate="">
                 <div className="row g-3">
                     <div className="col-sm-6">
                     <label htmlFor="firstName" className="form-label">

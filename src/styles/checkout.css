@@ -1,5 +1,6 @@
 .container {
   max-width: 960px;
+  overflow: scroll;
 }
 .bd-placeholder-img {
   font-size: 1.125rem;
