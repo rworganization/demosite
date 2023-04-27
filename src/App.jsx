@@ -10,6 +10,8 @@ import WebTables from './pages/WebTables';
 import Download from './pages/Download';
 import Dynamic from './pages/Dynamic';
 import Formulaire from './pages/Formulaire';
+import ThanksMessage from './pages/RadioButtonYes';
+
 
 function App() {
   
@@ -26,6 +28,8 @@ function App() {
         <Route path='/download' element={<Download />} />
         <Route path='/dynamic' element={<Dynamic />} />
         <Route path='/formulaire' element={<Formulaire />} />
+        <Route path='/radiobutton?like=yes' element={<ThanksMessage />} />
+        <Route path='/radiobutton?like=no' element={<ThanksMessage />} />
       </Routes>  
     </BrowserRouter>
     
