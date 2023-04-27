@@ -68,7 +68,8 @@ function Checkbox(props) {
     return (
         <div className="container">
   <h4 className="mb-3">checkbox</h4>
-  <div className="row g-3 list-group">
+  
+  <div className="col-md-7 col-lg-8 list-group">
     <label className="list-group-item d-flex gap-2">
       <input
         className="form-check-input flex-shrink-0 parent-checkbox"
@@ -90,8 +91,8 @@ function Checkbox(props) {
           defaultValue="option1"
         />
         <label className="form-check-label" htmlFor="inlineCheckbox1">
-          Child checkbox 1
-        </label>
+          Child checkbox 1 
+        </label> /*FIXME */
       </div>
       <div className="form-check form-check-inline">
         <input
@@ -101,7 +102,7 @@ function Checkbox(props) {
           defaultValue="option2"
         />
         <label className="form-check-label" htmlFor="inlineCheckbox2">
-          Child checkbox 2
+          Child checkbox 2 /*FIXME */
         </label>
       </div>
     </label>
@@ -125,7 +126,7 @@ function Checkbox(props) {
           defaultValue="option3"
         />
         <label className="form-check-label" htmlFor="inlineCheckbox3">
-          Child checkbox 1
+          Child checkbox 1 /*FIXME */
         </label>
       </div>
       <div className="form-check form-check-inline">
@@ -136,7 +137,7 @@ function Checkbox(props) {
           defaultValue="option4"
         />
         <label className="form-check-label" htmlFor="inlineCheckbox4">
-          Child checkbox 2
+          Child checkbox 2 /*FIXME */
         </label>
       </div>
     </label>
@@ -160,7 +161,7 @@ function Checkbox(props) {
           defaultValue="option5"
         />
         <label className="form-check-label" htmlFor="inlineCheckbox5">
-          Child checkbox 1
+          Child checkbox 1 /*FIXME */
         </label>
       </div>
       <div className="form-check form-check-inline">
@@ -171,8 +172,8 @@ function Checkbox(props) {
           defaultValue="option6"
         />
         <label className="form-check-label" htmlFor="inlineCheckbox6">
-          Child checkbox 2
-        </label>
+          Child checkbox 2 /*FIXME */
+        </label> 
       </div>
     </label>
   </div>

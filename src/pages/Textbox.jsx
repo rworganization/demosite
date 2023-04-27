@@ -15,7 +15,7 @@ function Textbox(props) {
     };
     return (
         <div className="container">
-            <div className="row g-5">
+            <div className="col-md-7 col-lg-8">
                 <h4 className="mb-3">Text box</h4>
                 <form className="needs-validation"  ref={formRef} onSubmit={handleSubmit} noValidate="">
                 <div className="row g-3">

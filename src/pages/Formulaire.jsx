@@ -264,7 +264,7 @@ class Formulaire extends Component {
                             type="checkbox"
                             id="recevoir-newsletter"
                             name="recevoir-newsletter"
-                            defaultChecked=""
+                            defaultChecked="checked"
                         />
                         </div>
                     </div>
