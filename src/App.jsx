@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter , Routes, Route } from 'react-router-dom';
+import { BrowserRouter , Routes, Route, Navigate } from 'react-router-dom';
 import Accueil from './pages/Accueil';
 import Buttons from './pages/Buttons';
 import Navbar from './pages/Navbar';
@@ -16,23 +16,21 @@ import ThanksMessage from './pages/RadioButtonYes';
 function App() {
   
   return (
-    <BrowserRouter basename="/demosite">   
-      <Navbar />   
+    <BrowserRouter>   
+      <Navbar />
       <Routes>
-        <Route path='/' element={<Accueil />}/>
-        <Route path='/buttons' element={<Buttons />} />   
-        <Route path='/checkbox' element={<Checkbox />} />  
-        <Route path='/textbox' element={<Textbox />} />    
-        <Route path='/radiobutton' element={<RadioButton />} /> 
-        <Route path='/webtables' element={<WebTables />} />
-        <Route path='/download' element={<Download />} />
-        <Route path='/dynamic' element={<Dynamic />} />
-        <Route path='/formulaire' element={<Formulaire />} />
-        <Route path='/radiobutton?like=yes' element={<ThanksMessage />} />
-        <Route path='/radiobutton?like=no' element={<ThanksMessage />} />
-      </Routes>  
-    </BrowserRouter>
-    
+        <Route exact path='/home' element={<Accueil />}/>
+        <Route exact path='/buttons' element={<Buttons />} />   
+        <Route exact path='/checkbox' element={<Checkbox />} />  
+        <Route exact path='/textbox' element={<Textbox />} />    
+        <Route exact path='/radiobutton' element={<RadioButton />} /> 
+        <Route exact path='/webtables' element={<WebTables />} />
+        <Route exact path='/download' element={<Download />} />
+        <Route exact path='/dynamic' element={<Dynamic />} />
+        <Route exact path='/formulaire' element={<Formulaire />} />    
+        <Route path='/' element={<Navigate to='/home' replace />} />
+      </Routes>
+    </BrowserRouter>    
   );
 }
 

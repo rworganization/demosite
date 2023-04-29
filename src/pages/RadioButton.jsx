@@ -56,7 +56,7 @@ function RadioButton(props) {
                     Non
                 </label>
                 </div>
-                <button type="submit" className="btn btn-primary mt-3">
+                <button type="submit" className="btn btn-primary mt-3" onClick={handleSubmit}>
                 Envoyer
                 </button>
             </form>
